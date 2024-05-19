@@ -4,8 +4,6 @@ import { checkProductData } from "../middlewares/checkProductData.middleware.js"
 
 const router = Router()
 
-let products = []
-
 router.get("/", async (req, res) => {
 
     try {
