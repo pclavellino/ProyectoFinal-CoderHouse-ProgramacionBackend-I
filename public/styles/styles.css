@@ -17,8 +17,12 @@ h2 {
 }
 
 .card {
-    width: 400px;
-    background-color: rgb(172, 160, 160);
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(112, 124, 177);
+    border-radius: 10px;
+    box-shadow: 10px 10px 25px black;
     padding: 15px;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -34,6 +38,23 @@ h2 {
 p {
     font-size: 22px;
     margin: 5px;
+}
+
+.price  {
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 25px;
+}
+
+#addButton  {
+
+    font-size: 22px;
+    padding: 5px;
+    width: 40%;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(167, 173, 171);
+
 }
 
 .productsForm {

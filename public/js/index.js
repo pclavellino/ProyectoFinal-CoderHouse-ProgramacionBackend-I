@@ -51,16 +51,19 @@ deleteForm.reset()
 socket.on("products", (data) => {
     productList.innerHTML = "";
     data.forEach((product) => {
-        const card = document.createElement("div");
-        card.innerHTML = `
-            <div class="card">
-                <h2 class="subtitle">${product.title}</h2>
-                <p class="id">ID: ${product.id}</p>
-                <p class="description">Description: ${product.description}</p>
-                <p class="price">Precio: $ ${product.price}</p>
-                <p class="stock">Stock: ${product.stock}</p>
-            </div>
-        `;
-        productList.appendChild(card)
+        if(product.status === true) {
+            const card = document.createElement("div");
+            card.innerHTML = `
+                <div class="card">
+                    <h2 class="subtitle">${product.title}</h2>
+                    <p class="id">ID: ${product._id}</p>
+                    <p class="description">Description: ${product.description}</p>
+                    <p class="price">Precio: $ ${product.price}</p>
+                    <p class="stock">Stock: ${product.stock}</p>
+                </div>
+            `;
+            productList.appendChild(card)
+
+        }
     })
 })
