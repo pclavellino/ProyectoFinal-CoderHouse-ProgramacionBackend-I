@@ -63,7 +63,6 @@ socket.on("products", (data) => {
                 </div>
             `;
             productList.appendChild(card)
-
         }
     })
 })
