@@ -14,7 +14,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
 
-// Conexión con MongoDB
+// Conexión con MongoDB //
 
 connectMongoDB();
 
@@ -22,12 +22,12 @@ const httpServer = app.listen(PORT, () => {
     console.log(`Servidor iniciado y escuchando en el puerto ${PORT}`)
 });
 
-// Inicialización de Socket.io
+// Inicialización de Socket.io //
 
 export const io = new Server(httpServer);
 
 
-// Configuración de Handlebars
+// Configuración de Handlebars //
 
 const hbs = handlebars.create({
     extname: '.hbs',
